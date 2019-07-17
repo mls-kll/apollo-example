@@ -11,7 +11,7 @@ const client = new ApolloClient({
 const App = () => (
   <ApolloProvider client={client}>
     <div className="App">
-      <h1>Lorem ipsum posts</h1>
+      <h1>Fake blog posts</h1>
       <Posts />
     </div>
   </ApolloProvider>

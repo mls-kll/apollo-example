@@ -4,7 +4,7 @@ const axios = require('axios');
 const typeDefs = gql`
   type Post {
     userId: String
-    id: String
+    id: Int
     title: String
     body: String
   }
@@ -18,7 +18,7 @@ const resolvers = {
   Query: {
     posts: async () => {
       let response = await axios.get(
-        'https://jsonplaceholder.typicode.com/posts'
+        'http://localhost:8080/posts'
       );
       return response.data;
     }
